@@ -46,7 +46,7 @@ jobs:
 
       - name: 生成静态文件
         run: |
-          hexo-clean
+          hexo clean
           hexo bangumi -u
           hexo generate
           gulp
@@ -54,8 +54,8 @@ jobs:
       - name: deploy to github
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token:
-          repository-name:
+          token: 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
+          repository-name: xuegqcto/xuegqcto.github.io
           branch: main
           folder: public
           commit-message: "${{ github.event.head_commit.message }} Updated By Github Actions"
